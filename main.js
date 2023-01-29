@@ -87,6 +87,12 @@ var specialCharacters = [
     'Y',
     'Z'
   ];
+  //variables for user input
+  let passLength;
+  let lowerCase = true;
+  let upperCase = true;
+  let numeric = true;
+  let specialChar = true;
   
   // Function to prompt user for password options
   function getPasswordOptions() {
@@ -97,6 +103,11 @@ var specialCharacters = [
     let specialChar = confirm("Do you want to include special characters?");
   
   }
+
+  function userInput() {
+    getPasswordOptions();
+
+  }
   
   // Function for getting a random element from an array
   function getRandom(arr) {
@@ -105,7 +116,7 @@ var specialCharacters = [
   
   // Function to generate password with user input
   function generatePassword() {
-    getPasswordOptions();
+
   }
   
   // Get references to the #generate element
