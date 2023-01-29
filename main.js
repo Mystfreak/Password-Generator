@@ -93,6 +93,9 @@ var specialCharacters = [
   let upperCase = true;
   let numeric = true;
   let specialChar = true;
+
+
+
   
   // Function to prompt user for password options
   function getPasswordOptions() {
@@ -101,13 +104,17 @@ var specialCharacters = [
     let upperCase = confirm("Do you want to include uppercase letters?");
     let numeric = confirm("Do you want to include numbers?");
     let specialChar = confirm("Do you want to include special characters?");
-  
+
+    // Checking user input is valid
+    if (!(Number.isInteger(passLength)) || (passLength < 8) || (passLength > 128)) {
+      passLength = prompt("Not valid password length. Please enter an acceptable number.");
+    }else if ((numeric === false) && (specialChar === false) && (lowerCase === false) && (upperCase === false)) {
+
+    }
+
   }
 
-  function userInput() {
-    getPasswordOptions();
-
-  }
+ 
   
   // Function for getting a random element from an array
   function getRandom(arr) {
