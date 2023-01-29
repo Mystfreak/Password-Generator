@@ -87,12 +87,7 @@ var specialCharacters = [
     'Y',
     'Z'
   ];
-  //variables for user input
-  let passLength;
-  let lowerCase = true;
-  let upperCase = true;
-  let numeric = true;
-  let specialChar = true;
+
 
 
 
