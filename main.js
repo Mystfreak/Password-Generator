@@ -90,8 +90,7 @@ var specialCharacters = [
   
   // Function to prompt user for password options
   function getPasswordOptions() {
-    let passLength = prompt("Type the length of password you want", 
-    "[At least 8 Characters but no more than 128]");
+    let passLength = prompt("Type the length of password you want [At least 8 Characters but no more than 128]");
     let lowerCase = confirm("Do you want to include lowercase letters?");
     let upperCase = confirm("Do you want to include uppercase letters?");
     let numeric = confirm("Do you want to include numbers?");
@@ -101,7 +100,7 @@ var specialCharacters = [
   
   // Function for getting a random element from an array
   function getRandom(arr) {
-  
+
   }
   
   // Function to generate password with user input
