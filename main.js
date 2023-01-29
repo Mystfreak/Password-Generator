@@ -106,7 +106,7 @@ var specialCharacters = [
   if (!(Number.isInteger(passLength)) || (passLength < 8) || (passLength > 128)) {
     passLength = prompt("Not valid password length. Please enter an acceptable number.");
   }else if ((numeric === false) && (specialChar === false) && (lowerCase === false) && (upperCase === false)) {
-    alert("Include at least one character type!")
+    alert("Include at least one character type!");
     getPasswordOptions();
   }
  }
