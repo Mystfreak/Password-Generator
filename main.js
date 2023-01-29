@@ -123,7 +123,7 @@ var specialCharacters = [
   
   // Function to generate password with user input
   function generatePassword() {
-
+    getPasswordOptions();
   }
   
   // Get references to the #generate element
