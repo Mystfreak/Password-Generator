@@ -97,8 +97,8 @@ var specialCharacters = [
     let passLength = prompt("Type password that is at least 8 Characters but no more than 128.");
 
     while ((passLength < 8) || (passLength > 128)) {
-      alert("Please type in an acceptable password length.")
-      passLength;
+      alert("Please type in an acceptable password length.");
+      passLength = prompt("Type password that is at least 8 characters but no more than 128.");
     }
 
 //Password options will only fully start once length of password conditions have been met.
