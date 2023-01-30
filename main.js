@@ -94,9 +94,14 @@ var specialCharacters = [
   
   // Function to prompt user for password options
   function getPasswordOptions() {
-    let passLength = prompt("Type password that is at least 8 Characters but no more than 128");
-   
-    
+    let passLength = prompt("Type password that is at least 8 Characters but no more than 128.");
+
+    while ((passLength < 8) || (passLength > 128)) {
+      alert("Please type in an acceptable password length.")
+      passLength;
+    }
+
+//Password options will only fully start once length of password conditions have been met.
     while ((passLength >= 8) && (passLength <= 128)) {
 
       let lowerCase = confirm("Do you want to include lowercase letters?");
