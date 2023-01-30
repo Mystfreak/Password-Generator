@@ -101,9 +101,11 @@ var specialCharacters = [
     let specialChar = confirm("Do you want to include special characters?");
 
  // Checking user input is valid
+ 
   if (!(Number.isInteger(passLength)) || (passLength < 8) || (passLength > 128)) {
     passLength = prompt("Not valid password length. Please enter an acceptable number.");
-  }else if ((numeric === false) && (specialChar === false) && (lowerCase === false) && (upperCase === false)) {
+  }
+  if ((numeric === false) && (specialChar === false) && (lowerCase === false) && (upperCase === false)) {
     alert("Include at least one character type!");
     getPasswordOptions();
  }
@@ -117,7 +119,7 @@ var specialCharacters = [
   
   // Function to generate password with user input
   function generatePassword() {
-    getPasswordOptions();
+    let getPass = getPasswordOptions();
   }
   
   // Get references to the #generate element
