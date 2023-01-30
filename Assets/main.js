@@ -94,21 +94,22 @@ var specialCharacters = [
   
   // Function to prompt user for password options
   function getPasswordOptions() {
-    let passLength = prompt("Type password that is at least 8 Characters but no more than 128");
-    let lowerCase = confirm("Do you want to include lowercase letters?");
-    let upperCase = confirm("Do you want to include uppercase letters?");
-    let numeric = confirm("Do you want to include numbers?");
-    let specialChar = confirm("Do you want to include special characters?");
+    let passLength = prompt("Type password that is at least 8 Characters but no more than 128.");
 
- // Checking user input is valid
- 
-  if (!(Number.isInteger(passLength)) || (passLength < 8) || (passLength > 128)) {
-    passLength = prompt("Not valid password length. Please enter an acceptable number.");
-  }
-  if ((numeric === false) && (specialChar === false) && (lowerCase === false) && (upperCase === false)) {
-    alert("Include at least one character type!");
-    getPasswordOptions();
- }
+    while ((passLength < 8) || (passLength > 128)) {
+      alert("Please type in an acceptable password length.");
+      passLength = prompt("Type password that is at least 8 characters but no more than 128.");
+    }
+
+//Password options will only fully start once length of password conditions have been met.
+    while ((passLength >= 8) && (passLength <= 128)) {
+
+      let lowerCase = confirm("Do you want to include lowercase letters?");
+      let upperCase = confirm("Do you want to include uppercase letters?");
+      let numeric = confirm("Do you want to include numbers?");
+      let specialChar = confirm("Do you want to include special characters?");
+  
+    }
 
 }
   
