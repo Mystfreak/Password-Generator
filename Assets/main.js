@@ -117,6 +117,14 @@ var specialCharacters = [
   
       }
 
+      return {
+        passLength: passLength,
+        lowerCase: lowerCase,
+        upperCase: upperCase,
+        numeric: numeric,
+        specialChar: specialChar
+      };
+
 }
   
   // Function for getting a random element from an array
