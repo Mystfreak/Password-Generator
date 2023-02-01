@@ -1,4 +1,4 @@
 # Password-Generator
 Generate a random password.
 
-Deployment Link[https://mystfreak.github.io/Password-Generator/}
+[Deployment link](https://mystfreak.github.io/Password-Generator/)
