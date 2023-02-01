@@ -136,7 +136,9 @@ var specialCharacters = [
   
   // Function to generate password with user input
   function generatePassword() {
+
     let finalResult = [];
+
     let userOption = getPasswordOptions();
 
     let getPass =[];
@@ -157,15 +159,15 @@ var specialCharacters = [
     }
 
     //Gives Random password based on length and character types selected.
-    for (let i = 0; i < userOption.length; i++) {
+    for (var i = 0; i < userOption.passLength; i++) {
 
       finalResult.push(getRandom(getPass));
 
     }
 
-    let passWord = finalResult.join('');
+    let finalPassword = finalResult.join('');
     
-    return passWord;
+    return finalPassword;
   }
   
   // Get references to the #generate element
@@ -175,7 +177,6 @@ var specialCharacters = [
   function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector('#password');
-  
     passwordText.value = password;
   }
   
