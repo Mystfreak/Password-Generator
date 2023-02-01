@@ -121,12 +121,43 @@ var specialCharacters = [
   
   // Function for getting a random element from an array
   function getRandom(arr) {
-
+    let randomArray = Math.floor(Math.random() * arr.length);
+    return arr[randomArray];
+    
   }
   
   // Function to generate password with user input
   function generatePassword() {
-    let getPass = getPasswordOptions();
+    let finalResult = [];
+    let userOption = getPasswordOptions();
+
+    let getPass =[];
+
+
+// Gets the arrays provided if user options are true.
+    if (userOption.lowerCase) {
+      getPass = getPass.concat(lowerCasedCharacters);
+    }
+     if (userOption.upperCase) {
+      getPass = getPass.concat(upperCasedCharacters);
+    }
+     if (userOption.numeric) {
+      getPass = getPass.concat(numericCharacters);
+    }
+     if (userOption.specialChar) {
+      getPass = getPass.concat(specialCharacters);
+    }
+
+    //Gives Random password based on length and character types selected.
+    for (let i = 0; i < userOption.length; i++) {
+
+      finalResult.push(getRandom(getPass));
+
+    }
+
+    let passWord = finalResult.join('');
+    
+    return passWord;
   }
   
   // Get references to the #generate element
