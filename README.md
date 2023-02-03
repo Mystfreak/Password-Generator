@@ -27,4 +27,6 @@ Once all prompts are answered, the password should be generated and displayed in
 
 ![Screenshot](Screenshot_20230203_112004.png)
 
+![Results](Screenshot_20230203_112057.png)
+
 [Deployment link](https://mystfreak.github.io/Password-Generator/)
